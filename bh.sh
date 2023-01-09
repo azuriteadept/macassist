@@ -4,7 +4,7 @@
 # 1. Sanity check for the presence of a battery.
 bh_data=$(ioreg -rc AppleSmartBattery)
 if [ "$bh_data" = "" ];
-    then echo 'No battery found, exiting.'; return 1;
+    then echo 'No battery found, exiting.'; return 0;
 fi
 
 # 2. Retrieve battery status.
